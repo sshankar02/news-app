@@ -2,26 +2,38 @@ import { useState, useEffect } from "react";
 import './App.css';
 // Components
 import NewsHome from './organism/NewsHome';
-import NewsDetails from './organism/NewsDetails';
 
 // Services
 import GetTopHeadlines from "./services/GetTopHeadlines";
+import GetFilteresHeadlines from "./services/GetFilteresHeadlines";
 
 function App() {
 
   const [newsItems, setNewsItems] = useState([]);
-  const [openedNewsItem, setOpenedNewsItem] = useState('');
+  const [loader, setLoader] = useState(true);
+
+  const filterNews = (keyword) =>{
+    setLoader(true);
+    GetFilteresHeadlines('default', keyword)
+      .then(response=>{
+          setLoader(false);
+          setNewsItems(response.data.articles)
+        });
+  }
 
   useEffect(()=>{
-    GetTopHeadlines('mock')
-      .then(response => setNewsItems(response.data.articles));
+    GetTopHeadlines()
+      .then(response => {
+          setLoader(false);
+          setNewsItems(response.data.articles)
+        });
   },[])
 
 
   return (
     <div className="App">
       <h1>News App</h1>
-      {openedNewsItem ? <NewsDetails /> : <NewsHome rows={newsItems} />}
+      { <NewsHome rows={newsItems} action={filterNews} loader={loader}/> }
     </div>
   );
 }

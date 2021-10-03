@@ -6,6 +6,8 @@
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
     border: 1px solid rgba(0,0,0,0.2);
+    text-decoration:none;
+    color :rgba(0,0,0,0.7);
 }
 
 .news-item .news-item-image{
@@ -15,4 +17,8 @@
 
 .news-item img{
     width:100%
+}
+
+.news-item .news-item-read-more{
+    color:rgba(115,115, 255, 1)
 }

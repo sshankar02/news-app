@@ -1,0 +1,28 @@
+.news-collection-container .loading-overlay{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,0.2);
+  }
+  
+  .news-collection-container .loading-spinner{
+    height: 3rem;
+    width: 3rem;
+    border: 0.5rem solid rgba(0,0,0,1);
+    border-top: 0.5rem solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spinner-spin infinite 1s linear;
+  }
+  
+  
+  @keyframes spinner-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

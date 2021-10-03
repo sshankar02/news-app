@@ -5,8 +5,8 @@ const UrlDictionary = (serviceName, environment = "default", queryString = "") =
             getFilteredNews : () => '../__mock__/mockData.json'
         },
         default : {
-            getTopHeadlines : () => 'https://localhost:8000',
-            getFilteredNews : () => `https://localhost:8000/query/${queryString}`
+            getTopHeadlines : () => 'http://localhost:8000',
+            getFilteredNews : () => `http://localhost:8000/query/${queryString}`
         }
     }
 

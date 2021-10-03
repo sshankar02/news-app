@@ -1,7 +1,7 @@
 import UrlDictionary from './UrlDictionary';
 
-const GetTopHeadlines = (environment='default') =>{
-    const url = UrlDictionary('getTopHeadlines', environment)();
+const GetFilteresHeadlines = (environment='default', keyword) =>{
+    const url = UrlDictionary('getFilteredNews', environment, keyword)();
 
     const requestOptions = {
         method:'GET'
@@ -11,4 +11,4 @@ const GetTopHeadlines = (environment='default') =>{
         .then(res => res.json())
 }
 
-export default GetTopHeadlines;
+export default GetFilteresHeadlines;
