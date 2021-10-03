@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode. The app is required to be run on port 3011 as this is allowed in the back server as allowed access control origin.
+Runs the app in the development mode. The app is required to be run on port 3011 as this is allowed in the backend server as allowed access control origin.
 Open [http://localhost:3011](http://localhost:3011) to view it in the browser.
 
 ### `npm test`
