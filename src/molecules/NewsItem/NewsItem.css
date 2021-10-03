@@ -1,0 +1,18 @@
+.news-item{
+    display:grid;
+    grid-auto-flow:column;
+    grid-template-columns: 6rem auto;
+    grid-gap:0.5rem;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.news-item .news-item-image{
+    align-self:center;
+    justify-self:center;
+}
+
+.news-item img{
+    width:100%
+}
