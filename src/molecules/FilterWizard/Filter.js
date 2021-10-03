@@ -17,7 +17,7 @@ const Filter = props =>{
     }
 
     const filterElement = <div className="news-filter">
-            <input type="text" onChange={debounce(filterChangeHandler, 1000)} defaultValue={inputValue} />
+            <input type="text" onChange={debounce(filterChangeHandler, 1000)} defaultValue={inputValue} placeholder="Type keyword to filter news"/>
         </div>
 
     return filterElement;

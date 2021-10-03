@@ -1,5 +1,9 @@
 .news-collection{
     display:grid;
     grid-auto-flow:row;
-    grid-gap:0.5rem
+    grid-gap:1.5rem
+}
+
+.news-collection .news-collection-message{
+    text-align:center;
 }

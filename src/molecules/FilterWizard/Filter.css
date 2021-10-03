@@ -1,0 +1,12 @@
+.news-filter{
+    text-align:center;
+    margin: auto 0;
+}
+.news-filter input{
+    width: 30%;
+    height: 2.5rem;
+    border: thin solid rgba(0,0,0,0.5);
+    border-radius: 1rem;
+    outline: none;
+    padding: 0 1rem;
+}

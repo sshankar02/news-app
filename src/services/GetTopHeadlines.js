@@ -8,7 +8,7 @@ const GetTopHeadlines = (environment='default') =>{
     }
     return fetch(url, requestOptions)
         .catch(err => console.log(err))
-        .then(res => res.json())
+        .then(res => res ? res.json() : null)
 }
 
 export default GetTopHeadlines;

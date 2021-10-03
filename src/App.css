@@ -1,1 +1,20 @@
+.App{
+    margin: 0 auto;
+    display:grid;
+    grid-auto-flow:row;
+    grid-template-rows:auto 1fr;
+    grid-gap: 2rem;
+}
 
+.App h1{
+    width: 100%;
+    text-align: center;
+}
+
+.App .app-header{
+    position: sticky;
+    top:0;
+    background-color: rgb(249,249,249);
+    padding-bottom: 1rem;
+    z-index:2;
+}

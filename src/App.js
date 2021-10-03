@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import './App.css';
 // Components
 import NewsHome from './organism/NewsHome';
+import Filter from './molecules/FilterWizard';
 
 // Services
 import GetTopHeadlines from "./services/GetTopHeadlines";
-import GetFilteresHeadlines from "./services/GetFilteresHeadlines";
+import GetFilteredHeadlines from "./services/GetFilteredHeadlines";
 
 function App() {
 
@@ -14,10 +15,15 @@ function App() {
 
   const filterNews = (keyword) =>{
     setLoader(true);
-    GetFilteresHeadlines('default', keyword)
+    GetFilteredHeadlines('default', keyword)
       .then(response=>{
           setLoader(false);
-          setNewsItems(response.data.articles)
+          setNewsItems(response?.data?.articles);
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
         });
   }
 
@@ -25,15 +31,18 @@ function App() {
     GetTopHeadlines()
       .then(response => {
           setLoader(false);
-          setNewsItems(response.data.articles)
+          setNewsItems(response?.data?.articles)
         });
   },[])
 
 
   return (
     <div className="App">
-      <h1>News App</h1>
-      { <NewsHome rows={newsItems} action={filterNews} loader={loader}/> }
+      <div className="app-header">
+        <h1>Top News Headlines</h1>
+        <Filter action={filterNews} />
+      </div>
+      { <NewsHome rows={newsItems} loader={loader}/> }
     </div>
   );
 }

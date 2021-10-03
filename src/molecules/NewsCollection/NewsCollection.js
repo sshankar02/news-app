@@ -6,7 +6,7 @@ const NewsCollection = props =>{
 
     const newsCollection = <div className="news-collection" data-testid="news-collection">
             { rows.length === 0 && !loader
-                ? <p data-testid="news-collection-message">No news to show</p>
+                ? <p className="news-collection-message" data-testid="news-collection-message">No news to show</p>
                 : rows.map((row,index) => <NewsItem key={`${index}-${row.title}`} row={row}/>) 
             }
         </div>
