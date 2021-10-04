@@ -6,7 +6,7 @@ News app is built on React using functional components and react hooks. The app 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and no other third party library was used. For state management, state lifting mechanism and SOC principle was used. All the state is maintained in App.js.
 
-Application architecture and landscape description can be found [here](https://github.com/sshankar02/news-app/docs/Architecture&Landscape.png).
+Application architecture and landscape description can be found [here](https://github.com/sshankar02/news-app/blob/main/docs/Architecture&Landscape.png).
 
 <img src="./news-app.png">
 
