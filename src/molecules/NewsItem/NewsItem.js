@@ -4,7 +4,7 @@ const NewsItem = props => {
     const {row = {}} = props;
 
     const rowElement = <a className="news-item" data-testid="news-item" href={row.url} target="_blank" rel="noopener noreferrer">
-            <div className="news-item-image"><img src={row.urlToImage} alt=""/></div>
+            <div className="news-item-image"><img loading="lazy" src={row?.urlToImage || "../../assets/img/news.png"} alt=""/></div>
             <div className="news-item-details">
                 <p className="news-item-details-title">{row.title}</p>
                 <p className="news-item-details-description">
